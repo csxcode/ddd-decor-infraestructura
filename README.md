@@ -18,7 +18,6 @@ Committer: Carlos Silva<br/>
 Doc: Infraestructura - REST API - Observaciones
 - Observaciones Mantenimiento Preventivo 12 de mayo
 
-<br><br>
 https://bitbucket.org/panetdecorcenter/infraestructura-backend/commits/0b39f631442f98e0809b42b65187fe4ffc718a3a
 
 
