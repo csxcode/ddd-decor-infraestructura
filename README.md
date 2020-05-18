@@ -10,11 +10,11 @@ sobre los patrones de arquitectura de software para refactorizarlo con el framew
 
 Acabando, describo el ultimo commit desde donde se empezo a refactorizar el proyecto:
 
-Commit: 0b39f631442f98e0809b42b65187fe4ffc718a3a [0b39f63]
-Parents: 7fb3b28c53
-Author: Carlos Silva <csilva@pa.pe>
-Date: Thursday, May 14, 2020 2:03:20 PM
-Committer: Carlos Silva
+Commit: 0b39f631442f98e0809b42b65187fe4ffc718a3a [0b39f63]<br/>
+Parents: 7fb3b28c53<br/>
+Author: Carlos Silva <csilva@pa.pe><br/>
+Date: Thursday, May 14, 2020 2:03:20 PM<br/>
+Committer: Carlos Silva<br/>
 Doc: Infraestructura - REST API - Observaciones
 - Observaciones Mantenimiento Preventivo 12 de mayo
 
