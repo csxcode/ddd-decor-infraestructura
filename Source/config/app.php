@@ -255,12 +255,12 @@ return [
     'paginate_default_page' => env('APP_PAGINATE_DEFAULT_PAGE'),
     'cookie_token_name' => 'decor_infra',
     'url_download_app_android' => '',
-    'path_log_api' => storage_path().'/logs/api/log.log',
-    'path_checklist_photos' => storage_path().'/files/checklist/',
-    'path_ticket_photos' => storage_path().'/files/ticket/',
-    'path_woq_files' => storage_path().'/files/woq/',
-    'path_wo_files' => storage_path().'/files/wo/',
-    'path_woh_files' => storage_path().'/files/woh/',
+    'path_log_api' => storage_path() . '/logs/api/log.log',
+    'path_checklist_photos' => storage_path() . '/files/checklist/',
+    'path_ticket_photos' => storage_path() . '/files/ticket/',
+    'path_woq_files' => storage_path() . '/files/woq/',
+    'path_wo_files' => storage_path() . '/files/wo/',
+    'path_woh_files' => storage_path() . '/files/woh/',
     'web_url' => env('APP_URL'),
     'web_photo_path' => '/public/{module}/{id}/photos/{guid}',
     'web_video_path' => '/public/{module}/{id}/videos/{guid}',
@@ -290,11 +290,6 @@ return [
     'mail_error_from_head' => 'Soporte Decorcenter (Visual Tiendas)',
     'mail_error_to' => ['dd_support@pa.pe'],
     'mail_error_subject' => 'Ha ocurrido un error procesando una solicitud',
-
-    // Mail New Ticket Parameters
-    'mail_new_ticket_from' => 'no-reply@decorcenter.pe',
-    'mail_new_ticket_from_head' => 'Nuevo Ticket',
-    'mail_new_ticket_subject' => 'Nuevo Ticket :number fue creado',
 
     // Mail Completed Checklist Parameters
     'mail_completed_checklist_from_head' => 'Checklist Completado',
@@ -330,5 +325,20 @@ return [
 
     'wo_email_inconforme_from_head' => 'OT Inconforme',
     'wo_email_inconforme_subject' => 'Trabajo inconforme en la OT # :number',
+
+    // Work Order Quote params
+    'wo_quote_email_submit_from_head' => 'Cotización recibida',
+    'wo_quote_email_submit_subject' => 'Cotización recibida :vendor_name - OT # :wo_number',
+
+    // Ticket params
+    'ticket_email_confirmed_from_head' => 'Ticket Confirmado',
+    'ticket_email_confirmed_subject' => 'Ticket # :ticket_number fue confirmado',
+
+    'ticket_email_annulled_from_head' => 'Ticket Anulado',
+    'ticket_email_annulled_subject' => 'Ticket # :ticket_number fue anulado',
+
+    'ticket_email_new_from_head' => 'Nuevo Ticket',
+    'ticket_email_new_subject' => 'Nuevo Ticket :ticket_number fue creado',
+
 
 ];

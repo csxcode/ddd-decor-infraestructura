@@ -29,10 +29,13 @@ return [
     'key_not_allowed'                               => 'El campo :attribute no esta permitido.',
     'array_no_one'                                  => 'No hay :attribute para agregar, verifique que los nombres (keys) deben ser correctos',
     'photos_no_one_key'                             => 'No hay fotos para agregar, verifique que los nombres (keys) deben ser correctos',
+    'user_allowed_to_update_role_field'             => 'Solo el usuario con el rol de :role puede actualizar el campo :field',
     'checklist' => [
         'cannot_edit' => 'El checklist ya no puede ser editado',
     ],
     'ticket' => [
+        'cannot_edit_due_to_status' => 'Ticket no se puede actualizar.',
+        'only_update_status' => 'Solo se puede actualizar un ticket con estado :status',        
         'photos' => [
             'order_duplicated_by_type' => 'El campo :attribute tiene valores duplicados para el tipo :type, verifique ya que estos valores deben ser unicos.',
         ]
@@ -47,7 +50,9 @@ return [
     'work_order_quote' => [
         'forbidden_because_wo_does_not_quoting' => 'No se puede realizar esta accion debido a que la orden de trabajo (OT) no es de estado cotizando.',
         'vendor_already_exists' => 'Este proveedor ya existe en el presupuesto',
-        'vendor_does_not_belong' => 'Este presupuesto no le pertence a este usuario de tipo proveedor.'
+        'vendor_does_not_belong' => 'Este presupuesto no le pertence a este usuario de tipo proveedor.',
+        'forbidden_because_does_not_pending' => 'No se puede realizar esta accion debido a que el estado actual de la cotizacion no es pendiente.',
+        'user_cannot_update_entered_status' => 'Este tipo de usuario no puede actualizar el estado ingresado.',
     ],
     'work_order_cost_center' =>
     [

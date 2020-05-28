@@ -1,15 +1,15 @@
 <?php
 
+use App\Http\Controllers\Api\Ticket\TicketController;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['namespace' => 'Api'], function()
-{
+Route::group(['namespace' => 'Api'], function () {
     // ======================================================================
     // ==================== Public Endpoints ================================
     // ======================================================================
 
     // [Authentication]
-    Route::prefix('auth')->group(function(){
+    Route::prefix('auth')->group(function () {
         Route::post('login', 'AuthController@login');
         Route::post('logout', 'AuthController@logout');
         Route::get('ping', 'AuthController@ping');
@@ -20,16 +20,16 @@ Route::group(['namespace' => 'Api'], function()
     // ==================== Protected Endpoints =============================
     // ======================================================================
 
-    Route::group(['middleware' => 'auth.api'], function() {
+    Route::group(['middleware' => 'auth.api'], function () {
 
         // [Dashboard]
-        Route::prefix('dashboard')->group(function(){
+        Route::prefix('dashboard')->group(function () {
             Route::get('/', 'DashboardController@Get');
         });
 
         // [Checklist]
-        Route::group(['namespace' => 'CheckList'], function() {
-            Route::prefix('checklist')->group(function(){
+        Route::group(['namespace' => 'CheckList'], function () {
+            Route::prefix('checklist')->group(function () {
 
                 //-----------------------------------
                 // checklist_status
@@ -65,37 +65,23 @@ Route::group(['namespace' => 'Api'], function()
         });
 
         // [Ticket]
-        Route::group(['namespace' => 'Ticket'], function() {
-            Route::prefix('tickets')->group(function () {
-
-                Route::get('/status', 'TicketStatusController@All');
-                Route::get('/types', 'TicketTypeController@All');
-
-                Route::get('/', 'TicketController@All');
-                Route::get('/{id}', 'TicketController@Get');
-                Route::post('/', 'TicketController@Create');
-                Route::patch('/{id}', 'TicketController@Update');
-                Route::post('/{id}/photos', 'TicketPhotoController@AddPhotos');
-
-                // update video fields of ticket table
-                Route::post('/{id}/video', 'TicketController@VideoProcess');
-
-
-                //-----------------------------------
-                // ticket_comment
-                //-----------------------------------
-                Route::post('/{id}/comments', 'TicketCommentController@Create');
-                Route::get('/{id}/comments', 'TicketCommentController@Get');
-            });
+        Route::group(['namespace' => 'Ticket'], function () {
+            $module = 'tickets';
+            Route::resource($module . '/status', 'TicketStatusController');
+            Route::resource($module . '/types', 'TicketTypeController');
+            Route::resource($module, 'TicketController');
+            Route::resource($module . '/{id}/photos', 'TicketPhotoController');
+            Route::resource($module . '/{id}/video', 'TicketVideoController');
+            Route::resource($module . '/{id}/comments', 'TicketCommentController');
         });
 
         // [Stores]
-        Route::prefix('stores')->group(function(){
+        Route::prefix('stores')->group(function () {
             Route::get('/', 'StoreController@All');
         });
 
         // [WorkOrder]
-        Route::group(['namespace' => 'WorkOrder'], function() {
+        Route::group(['namespace' => 'WorkOrder'], function () {
 
             // work_orders
             Route::apiResource('work_orders', 'WorkOrderController');
@@ -160,7 +146,5 @@ Route::group(['namespace' => 'Api'], function()
 
         // [Maintenance]
         Route::apiResource('maintenances', 'MaintenanceController');
-
     });
-
 });
