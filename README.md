@@ -21,6 +21,13 @@ Doc: Infraestructura - REST API - Observaciones
 https://bitbucket.org/panetdecorcenter/infraestructura-backend/commits/0b39f631442f98e0809b42b65187fe4ffc718a3a
 
 
+Este skeleton se baso de los siguientes articulos y proyectos (clean arquitecture):
+- https://stefanbauer.me/articles/an-alternative-way-to-organize-the-laravel-directory-structure
+- https://github.com/brendt/aggregate.stitcher.io
+- https://www.youtube.com/watch?v=y3MWfPDmVqo
+- https://www.laraveltip.com/desacoplando-laravel-de-tu-aplicacion/
+
+
 
 
 
