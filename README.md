@@ -26,6 +26,7 @@ Este skeleton se baso de los siguientes articulos y proyectos (clean arquitectur
 - https://github.com/brendt/aggregate.stitcher.io
 - https://www.youtube.com/watch?v=y3MWfPDmVqo
 - https://www.laraveltip.com/desacoplando-laravel-de-tu-aplicacion/
+- added
 
 
 
